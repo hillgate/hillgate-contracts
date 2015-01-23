@@ -1,0 +1,473 @@
+@import "normalize.css";
+@import "adamrneary-base-css/css/concourse";
+@import "adamrneary-base-css/css/equity";
+@import "suitcss-base";
+@import "suitcss-components-button";
+@import "suitcss-components-grid";
+@import "suitcss-utils-size";
+
+:root {
+
+  --u-color-white: #fff;
+
+  --u-color-gray-darker: #222;
+  --u-color-gray-dark: #333;
+  --u-color-gray: #555;
+  --u-color-gray-light: #999;
+  --u-color-gray-lighter: #f7f7f7;
+
+  --u-color-blue-darker: #333;
+  --u-color-blue-dark: #2D4051;
+  --u-color-blue: #264b6b;
+  --u-color-blue-light: #4a6985;
+  --u-color-blue-lighter: #ACB4DC;
+
+  --u-color-success: #C69FAE;
+  --u-color-success-dark: #C69FAE;
+  --u-color-warning: #C69FAE;
+  --u-color-warning-dark: #C69FAE;
+  --u-color-danger: #C69FAE;
+  --u-color-danger-dark: #C69FAE;
+
+  --u-color-brand: var(--u-color-blue);
+  --u-color-metric-light: var(--u-color-blue-lighter);
+  --u-color-metric: var(--u-color-blue-light);
+  --u-color-metric-dark: var(--u-color-blue-dark);
+
+
+  --u-color-base-text: var(--u-color-gray);
+
+  --u-font-sans-serif: Concourse;
+  --u-font-serif: Equity;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 100%;
+  font-family: var(--u-font-sans-serif);
+  color: var(--u-color-base-text);
+  background-color: var(--u-color-metric-dark);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--u-font-serif);
+  font-weight: 100;
+}
+h1 {
+  font-size: 2.7em;
+  color: var(--u-color-metric-dark);
+}
+
+
+.u-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.u-light {
+  background-color: var(--u-color-gray-lighter);
+}
+.u-dark {
+  background-color: var(--u-color-metric);
+  border-top: 1px solid var(--u-color-brand);
+  height: 600px;
+}
+
+
+.Sidebar {
+  color: var(--u-color-white);
+}
+.Brand {
+  height: 60px;
+  padding: 10px;
+  border-bottom: 1px solid var(--u-color-metric);
+  font-family: Equity;
+  font-weight: 100;
+}
+.Logo {
+  height: 36px;
+}
+
+.AppHeader {
+  background-color: var(--u-color-gray-lighter);
+  border-bottom: 1px solid var(--u-color-gray-light);
+}
+.Breadcrumb {
+  float: left;
+  margin-right: 1em;
+  padding: 1.2em;
+  height: 60px;
+  border-right: 1px solid var(--u-color-gray-light);
+}
+.UserSelect {
+  float: right;
+  margin-left: 1em;
+  padding: 10px 9px 10px 11px;
+  height: 60px;
+  border-left: 1px solid var(--u-color-metric-dark);
+  background-color: var(--u-color-metric-dark);
+}
+.SearchBox {
+  padding: 1.2em 0;
+  height: 60px;
+  width: 100%;
+}
+.SearchInput {
+  background-color: transparent;
+  border: none;
+  padding: 0 1em;
+  width: 30em;
+}
+.SearchInput:focus {
+  outline: none;
+}
+
+.UserProfileHeader {
+  padding: 3em 0 3em;
+}
+.Avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  float: left;
+  margin-right: 2em;
+  border: 3px solid var(--u-color-metric-dark);
+}
+.Avatar-small {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+.UserHeaderText {
+  padding-top: 8px;
+  font-weight: 300;
+}
+.UserActionButtons {
+  padding-top: 25px;
+  float: right;
+}
+.UserActionButtons a {
+  padding: 1em;
+  margin-right: 1em;
+  border-radius: 100px;
+  border: 2px solid var(--u-color-metric-dark);
+}
+.Button {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  background-color: var(--u-color-white);
+}
+
+
+/* Vertical Nav
+*/
+.Nav--Nav-Vertical {
+  padding: 1.2em 0;
+  border-bottom: 1px solid var(--u-color-metric);
+}
+.Nav--Nav-Vertical span {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--u-color-metric-light);
+  padding: 1em;
+}
+.Nav--Nav-Vertical li {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.8rem;
+  padding: .5em 1.2em;
+}
+.Nav--Nav-Vertical li.ui-state-active {
+  border-left: 4px solid var(--u-color-white);
+  padding-left: calc(1em-4px);
+}
+.Nav--Nav-Vertical li.ui-state-active i {
+  color: var(--u-color-white);
+  font-weight: normal;
+  margin-left: -4px;
+}
+.Nav--Nav-Vertical li.ui-state-active a {
+  color: var(--u-color-white);
+  font-weight: normal;
+}
+.Nav--Nav-Vertical i {
+  padding-right: 1em;
+}
+.Nav--Nav-Vertical a, .Nav--Nav-Vertical i {
+  text-decoration: none;
+  color: var(--u-color-metric-light);
+}
+.Nav--Nav-Vertical img.Avatar-small {
+  position: relative;
+  top: 11px;
+  margin-right: 7px;
+}
+
+/* Horizontal Nav
+*/
+.Nav--Nav-Horizontal li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-right: 2.5em;
+  padding: 1em 0;
+}
+.Nav--Nav-Horizontal li.ui-state-active {
+  border-bottom: 4px solid var(--u-color-metric-dark);
+}
+.Nav--Nav-Horizontal li.ui-state-active a {
+  color: var(--u-color-base-text);
+  font-weight: 600;
+}
+.Nav--Nav-Horizontal a {
+  text-decoration: none;
+  color: var(--u-color-brand);
+}
+
+.Metric {
+  color: var(--u-color-white);
+  border-right: 1px solid var(--u-color-metric-light);
+  border-bottom: 1px solid var(--u-color-metric-light);
+  padding: 0.5em;
+  height: 13em;
+  position: relative;
+}
+.Metric--Danger {
+  background-color: var(--u-color-danger);
+}
+.Metric--title {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  color: var(--u-color-metric-light);
+  margin-bottom: 1em;
+}
+.Metric--Danger .Metric--title{
+  color: var(--u-color-base-text)
+}
+.Metric--value {
+  font-size: 4em;
+  font-weight: 100;
+  margin: 10px 0 0 3.5rem;
+  display: inline-block;
+  font-family: var(--u-font-serif);
+}
+.Metric--units {
+  display: inline-block;
+  font-weight: 100;
+}
+.Metric--label {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.Metric--track {
+  width: 60%;
+  margin: 0 auto;
+  height: 2px;
+  background-color: var(--u-color-metric-dark);
+}
+.Metric--line {
+  height: 2px;
+  background-color: var(--u-color-white);
+}
+.Metric--bars {
+  background-color: var(--u-color-metric-light);
+  color: var(--u-color-metric-dark);
+  text-align: right;
+  padding: 0.25em;
+  margin: 2px 0;
+  font-size: 0.85em;
+}
+.Metric--barLabels {
+  text-align: right;
+  text-transform: uppercase;
+  padding: 0.25em;
+  margin: 2px 5px;
+  font-size: 0.85em;
+
+}
+
+.EducationHistory {
+  position: relative;
+  margin: 0 0 1em 0.75em;
+  background-color: var(--u-color-gray-lighter);
+  padding: 8px;
+  border: 2px solid var(--u-color-metric-dark);
+}
+
+/* Required for Down Triangle */
+.EducationHistory:before, .EducationHistory:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-left: 0;
+}
+
+/* Stroke */
+.EducationHistory:before {
+  left: -11px;
+  top: 5px;
+
+  /* If 1px darken stroke slightly */
+  border-right-color: var(--u-color-metric-dark);
+  border-width: 10px;
+}
+
+/* Fill */
+.EducationHistory:after {
+  left: -8px;
+  top: 5px;
+  border-right-color: var(--u-color-gray-lighter);
+  border-width: 10px;
+}
+
+.EducationHistory--School {
+  color: var(--u-color-base-text);
+  font-size: 0.9rem;
+}
+.EducationHistory--Degree {
+  font-weight: 600;
+  color: var(--u-color-metric-dark);
+}
+.EducationHistory--Year {
+  float: right;
+  color: var(--u-color-metric-dark);
+  background-color: white;
+  border-radius: 52px;
+  border: 2px solid var(--u-color-metric-dark);
+  font-size: 0.8rem;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.Curve--title {
+  color: white;
+  margin-bottom: 11px;
+  font-weight: 300;
+  font-size: 1rem;
+  text-transform: none;
+}
+.Curve--label {
+  color: var(--u-color-metric-dark);
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.Curve--label span {
+  margin: 0 .2em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--u-color-white);
+}
+.Metric--Danger .Curve--label span {
+  color: var(--u-color-metric);
+  text-decoration: underline;
+}
+
+.Footer {
+  background-color: var(--u-color-gray-lighter);
+  padding: 1.5em;
+}
+.Footer li {
+  display: inline-block;
+  margin-right: 1em;
+}
+.Footer span {
+  color: var(--u-color-base-text);
+}
+.Footer a {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--u-color-brand);
+}
+
+
+
+
+
+.progress-meter .background {
+  fill: var(--u-color-metric-dark);
+}
+.progress-meter  .foreground {
+  fill: var(--u-color-white);
+}
+
+.progress-meter text {
+  font-family: var(--u-font-serif);
+  font-size: 4em;
+  color: var(--u-color-white);
+}
+
+.progress-meter .text2 {
+  font-family: var(--u-font-sans-serif);
+  /*text-transform: uppercase;*/
+  font-weight: 300;
+  font-size: 1rem;
+
+  /*font-size: 0.8rem;*/
+}
+
+.NormalCurve--Background {
+    fill: transparent;
+    stroke: var(--u-color-metric-dark);
+    stroke-width: 2px;
+    z-index: 10;
+}
+
+.NormalCurve--Foreground {
+    fill: var(--u-color-metric-light);
+    /*stroke: var(--u-color-metric-dark);*/
+    stroke-width: 2px;
+    z-index: 5;
+}
+
+.bar {
+  fill: var(--u-color-metric-dark);
+}
+.bar:hover {
+  fill: var(--u-color-metric-light);
+}
+.axis {
+  font: 0.8rem var(--u-font-sans-serif);
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.axis path, .axis line {
+  display: none;
+}
+.axis text {
+  fill: var(--u-color-white);
+}
+.x.axis path {
+  display: none;
+}
+text.ChartTitle {
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.sparkline {
+  fill: none;
+  stroke: var(--u-color-metric-light);
+  stroke-width: 2px;
+}
+.sparkcircle {
+  fill: var(--u-color-white);
+  stroke: var(--u-color-metric);
+  stroke-width: 2px;
+}
