@@ -53,10 +53,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--u-font-serif);
   font-weight: 100;
+  color: var(--u-color-blue-dark);
 }
 h1 {
   font-size: 2.7em;
-  color: var(--u-color-metric-dark);
 }
 
 
@@ -576,4 +576,61 @@ textarea {
   font-family: var(--u-font-serif);
   font-size: 1.1rem;
   width: 100%;
+}
+
+
+
+
+
+.stepwizard {
+  width: 100%;
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+.stepwizard-row:before {
+  top: 14px;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+.stepwizard-step {
+  position: relative;
+  float: left;
+  width: 20%;
+  top: -2px;
+  text-align: center;
+}
+.stepwizard-step button {
+  color: var(--u-color-metric-dark);
+  background-color: white;
+  border-radius: 52px;
+  border: 2px solid var(--u-color-metric-dark);
+  font-size: 0.8rem;
+  padding: 8px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.stepwizard-step.success button {
+  color: var(--u-color-white);
+  background-color: var(--u-color-success-dark);
+  border: 2px solid var(--u-color-success-dark);
+}
+.stepwizard-step.success p {
+  color: var(--u-color-success-dark);
+}
+.stepwizard-step.disabled button {
+  color: var(--u-color-white);
+  background-color: var(--u-color-gray-light);
+  border: 2px solid var(--u-color-gray-light);
+}
+.stepwizard-step button[disabled] {
+  opacity: 1 !important;
+  filter: alpha(opacity=100) !important;
+}
+.stepwizard-step p {
+  font-size: 14px;
 }
