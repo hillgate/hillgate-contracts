@@ -634,3 +634,14 @@ textarea {
 .stepwizard-step p {
   font-size: 14px;
 }
+
+.SignableIFrame {
+  margin-top: 60px;
+}
+
+.SignableIFrame iframe {
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+  border: 1px solid var(--u-color-metric-dark);
+}
