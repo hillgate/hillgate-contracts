@@ -11,7 +11,7 @@
     <script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
     <script>
     $(function() {
-      $( "#js-tabs" ).tabs();
+      $( "#js-tabs" ).tabs({active: 0});
     });
     </script>
   </head>
@@ -150,72 +150,80 @@
 
     </div>
 
-    <div class="u-dark">
-
-      <div id="summary">
+    <div id="status">
+      <div class="u-dark u-content">
         <div class="Grid Grid--alignCenter">
 
           <div class="Grid-cell u-size1of4">
-            <div id="OverallScore" class="Metric">
-              <div class="Metric--title">Overall Score</div>
-            </div>
-          </div>
-
-          <div class="Grid-cell u-size1of4">
-            <div id="CategoryScores" class="Metric">
-              <div class="Metric--title">Score Breakdown</div>
+            <div class="Metric">
+              <div class="Metric--title">Agreement to Terms</div>
               <div class="Grid Grid--alignCenter">
-                <div class="Grid-cell u-size1of2">
-                  <div class="Metric--barLabels">Experience</div>
-                  <div class="Metric--barLabels">Education</div>
-                  <div class="Metric--barLabels">Cases</div>
-                  <div class="Metric--barLabels">Hillgate</div>
-                  <div class="Metric--barLabels">Authorship</div>
-                  <div class="Metric--barLabels">Social</div>
+                <div class="Grid-cell u-size1of5">
+                  <div class="SignatureAuthority--Status">
+                    <i class="fa fa-check fa-lg"></i>
+                  </div>
                 </div>
-                <div class="Grid-cell u-size1of2">
-                  <div class="Metric--bars" style="width: 54%">5.4</div>
-                  <div class="Metric--bars" style="width: 32%">3.2</div>
-                  <div class="Metric--bars" style="width: 87%">8.7</div>
-                  <div class="Metric--bars" style="width: 45%">4.5</div>
-                  <div class="Metric--bars" style="width: 92%">9.2</div>
-                  <div class="Metric--bars" style="width: 23%">2.3</div>
+                <div class="Grid-cell u-size4of5">
+                  <div class="SignatureAuthority">
+                    <div class="SignatureAuthority--Name">
+                      Tom Brady
+                    </div>
+                    <div class="SignatureAuthority--Email">
+                      tom.brady@patriots.com
+                    </div>
+                  </div>
+                </div>
+                <div class="Grid-cell u-size1of5">
+                  <div class="SignatureAuthority--Status">
+                    <i class="fa fa-check fa-lg"></i>
+                  </div>
+                </div>
+                <div class="Grid-cell u-size4of5">
+                  <div class="SignatureAuthority">
+                    <div class="SignatureAuthority--Name">
+                      Robert Kraft
+                    </div>
+                    <div class="SignatureAuthority--Email">
+                      robert.kraft@patriots.com
+                    </div>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
 
           <div class="Grid-cell u-size1of4">
             <div class="Metric">
-              <div class="Metric--title">Education</div>
+              <div class="Metric--title">Signature Authority</div>
               <div class="Grid Grid--alignCenter">
                 <div class="Grid-cell u-size1of5">
-                  <div class="EducationHistory--Year">
-                    2012
+                  <div class="SignatureAuthority--Status">
+                    <i class="fa fa-check fa-lg"></i>
                   </div>
                 </div>
                 <div class="Grid-cell u-size4of5">
-                  <div class="EducationHistory">
-                    <div class="EducationHistory--Degree">
-                      Ph.D. — Statistics
+                  <div class="SignatureAuthority">
+                    <div class="SignatureAuthority--Name">
+                      Tom Brady
                     </div>
-                    <div class="EducationHistory--School">
-                      Stanford
+                    <div class="SignatureAuthority--Email">
+                      tom.brady@patriots.com
                     </div>
                   </div>
                 </div>
                 <div class="Grid-cell u-size1of5">
-                  <div class="EducationHistory--Year">
-                    2007
+                  <div class="SignatureAuthority--Status">
+                    <i class="fa fa-check fa-lg"></i>
                   </div>
                 </div>
                 <div class="Grid-cell u-size4of5">
-                  <div class="EducationHistory">
-                    <div class="EducationHistory--Degree">
-                      MBA
+                  <div class="SignatureAuthority">
+                    <div class="SignatureAuthority--Name">
+                      Robert Kraft
                     </div>
-                    <div class="EducationHistory--School">
-                      Harvard Business School
+                    <div class="SignatureAuthority--Email">
+                      robert.kraft@patriots.com
                     </div>
                   </div>
                 </div>
@@ -224,50 +232,96 @@
             </div>
           </div>
 
+
+
           <div class="Grid-cell u-size1of4">
-            <div id="Ratings" class="Metric">
-              <div class="Metric--title">Employer Rating</div>
-              <div class="Curve--label">
-                Rated in the top <span>4.7%</span><br />
-                over <span>7</span> cases
+            <div id="ContractStatus" class="Metric">
+              <div class="Metric--title">Contract Generation</div>
+
+              <div class="Grid Grid--alignCenter">
+                <div class="Grid-cell u-size1of5">
+                  <div class="SignatureAuthority--Status">
+                    <i class="fa fa-check fa-lg"></i>
+                  </div>
+                </div>
+                <div class="Grid-cell u-size4of5">
+                  <div class="SignatureAuthority">
+                    <div class="SignatureAuthority--Name">
+                      Generated 2 days ago
+                    </div>
+                    <div class="SignatureAuthority--Email">
+                      2015-02-01 14:13 GMT
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="Grid-cell u-size1of4">
+            <div class="Metric">
+              <div class="Metric--title">Contract Signatures</div>
+              <div class="Grid Grid--alignCenter">
+                <div class="Grid-cell u-size1of5">
+                  <div class="SignatureAuthority--Status">
+                    <i class="fa fa-check fa-lg"></i>
+                  </div>
+                </div>
+                <div class="Grid-cell u-size4of5">
+                  <div class="SignatureAuthority">
+                    <div class="SignatureAuthority--Name">
+                      Tom Brady
+                    </div>
+                    <div class="SignatureAuthority--Email">
+                      tom.brady@patriots.com
+                    </div>
+                  </div>
+                </div>
+                <div class="Grid-cell u-size1of5">
+                  <div class="SignatureAuthority--Status">
+                    <i class="fa fa-check fa-lg"></i>
+                  </div>
+                </div>
+                <div class="Grid-cell u-size4of5">
+                  <div class="SignatureAuthority">
+                    <div class="SignatureAuthority--Name">
+                      Robert Kraft
+                    </div>
+                    <div class="SignatureAuthority--Email">
+                      robert.kraft@patriots.com
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="Grid-cell u-size2of4">
-            <div id="ColumnChart" class="Metric">
-              <div class="Metric--title">Trailing 12 Month Billings</div>
+
+          <div class="Grid-cell u-size1of4">
+            <div id="TermRevisionNumber" class="Metric">
+              <div class="Metric--title">Terms Revision Number</div>
+              <div class="Metric--value Matric--value--lower">v3</div>
             </div>
           </div>
 
+
           <div class="Grid-cell u-size1of4">
-            <div id="BillableRate" class="Metric">
-              <div class="Metric--title">Billable rate</div>
-              <div class="Metric--value">
-                $225
-              </div>
-              <div class="Metric--units">
-                per hour
-              </div>
+            <div id="ContractTimeframe" class="Metric">
+              <div class="Metric--title">Contract Timeframe</div>
             </div>
           </div>
 
+
+
           <div class="Grid-cell u-size1of4">
-            <div class="Metric Metric--Danger">
-              <div class="Metric--title">Availability</div>
-              <div class="Metric--value">
-                30
-              </div>
-              <div class="Metric--units">
-                hours per week
-              </div>
-              <div class="Metric--track">
-                <div class="Metric--line" style="width: 75%"></div>
-              </div>
-              <div class="Curve--label">
-                Currently <span>unavailabile</span>
-              </div>
-            </div>
+            <div class="Metric"></div>
+          </div>
+
+
+          <div class="Grid-cell u-size1of4">
+            <div class="Metric"></div>
           </div>
 
 
@@ -307,116 +361,78 @@
 
 
       </div>
-      <div id="experience">
-
-        Experience score: 2.1 <br />
-        Chief Technology Officer <br />
-        Hillgate <br />
-        Nov 2014 - Jan 2015 <br />
-        <p>
-          Platform: Node, Angular, Mongo, React, Firebase
-        </p>
-        <ul>
-          <li>Built a real time scoring system for processing recommendations as users populate and update profiles</li>
-          <li>Rebuilt a beta-stage front end, including UX and visual design, transitioning from Angular to React/Firebase</li>
-        </ul>
-
-        Chief Technology Officer <br />
-        Adventr <br />
-        Mar 2012 - Nov 2014
-        <ul>
-          <li>Built a user-facing real time analytics platform using Kinesis, Lambda, Firebase, and React</li>
-          <li>Laid the groundwork for transitioning the front end from sprawling, imperative jquery/ajax DOM manipulations to a cleaner, testable interface based on Firebase and React</li>
-          <li>Laid the groundwork for disaggregating the back end from a monolithic django project into a cleaner, testable micro-services architecture</li>
-          <li>Cleaned up legacy DevOps, streamlining engineering onboarding and deployments</li>
-        </ul>
-
-        Chief Technology Officer <br />
-        Activecell <br />
-        Jan 2010 - Mar 2012 <br />
-        <ul>
-          <li>Led engineering of a SaaS platform, managing a global team of 22 engineers (js, rails, designers)</li>
-          <li>Built “small data” js libraries: interactive charts and grids using d3, reactive programming for cached client-side time series analysis, local storage/sync/loading to interface with backbone.js</li>
-          <li>Designed a flexible, canonical startup/SMB financial model for the product, delivering historical financial performance, cash flow forecasting, and key operational metrics (e.g. CAC, LTV, Churn)</li>
-        </ul>
-
-        Chief Executive Officer <br />
-        Profitably, Inc. <br />
-        Jan 2009 - Jan 2010 <br />
-        <ul>
-          <li>Rolled out our small business analytics application to over 3,500 small businesses
-          <li>Raised ~$2M in venture capital and angel funding
-          <li>Featured in the Wall Street Journal, Boston Globe, Inc, Fortune, Forbes, and Business Insider
-          <li>Rebuilt from scratch and rebranded as Activecell (see above)
-        </ul>
-
-        Vice President <br />
-        AlixPartners <br />
-        Jan 2008 - Dec 2008 <br />
-        <ul>
-          <li>Led data discovery and modeling for one of the largest fraud cases in history</li>
-          <li>Relied upon for providing detailed analysis to the SEC, Wall Street Journal, and trustees</li>
-          <li>Given responsibility for “one source of truth” data models supporting numerous high profile cases</li>
-        </ul>
-
-        Director of Business Intelligence <br />
-        Concentra Consulting <br />
-        2006 - 2007 <br />
-        <ul>
-          <li>Data modeling: Smart grid predictive model, cancer research aggregation framework, inventory optimization and logistics planning, activity-based-costing and pricing optimization, market research automation</li>
-          <li>Created 1 of 4 revenue-generating business units (full P&L responsibility)</li>
-          <li>Provided internal consulting during burst of growth from 14 consultants and £1.9M annual run rate revenue to 64 consultants and £5.8M annual run rate revenue (incl. Sales & Operational Planning, Invoice-to-Cash, Performance Management, Recruiting processes) while generating £450k in sales against a target of £100k
-        </ul>
-
-        Manager, Data Analytics <br />
-        A.T. Kearney
-        <ul>
-          <li>Data modeling: Supply chain network optimization, activity-based costing, price optimization, spend and organizational visibility, financial reporting, and categorization/normalization of dirty datasets</li>
-          <li>Led and delivered projects spanning financial services, distribution, pharmaceutical, public sector, consumer products, and retail sectors</li>
-          <li>Built internal software application for spend modeling (still in use today)</li>
-          <li>Helped drive global growth of Data Analytics practice from 7 to 54 consultants while generating $1.6M in sales</li>
-        </ul>
-
+    </div>
+    <div id="terms">
+      <div class="u-light u-content">
+        <div class="u-container">
+          <div class="Terms">
+            <div class="Grid Grid--alignLeft Grid--withSpace">
+              <div class="Grid-cell u-size1of3">
+                <h2>Revision</h2>
+              </div>
+              <div class="Grid-cell u-size2of3">
+                <dl class="dl-horizontal">
+                  <dt>Current revision</dt>
+                  <dd>3</dd>
+                  <dt>Submitted</dt>
+                  <dd>2015-02-01 14:30 GMT</dd>
+                  <dt>Submitted by</dt>
+                  <dd>Tom Brady</dd>
+                </dl>
+                <a class="Button Button--Sexy" href="javascript:;">
+                  <i class="fa fa-plus-circle fa-fw fa-lg"></i>
+                  Submit a New Revision
+                </a>
+              </div>
+              <div class="Grid-cell u-size1of3">
+                <h2>Goals</h2>
+              </div>
+              <div class="Grid-cell u-size2of3">
+                <textarea rows="3"></textarea>
+              </div>
+              <div class="Grid-cell u-size1of3">
+                <h2>Scope</h2>
+              </div>
+              <div class="Grid-cell u-size2of3">
+                <textarea rows="12"></textarea>
+              </div>
+              <div class="Grid-cell u-size1of3">
+                <h2>Deliverables</h2>
+              </div>
+              <div class="Grid-cell u-size2of3">
+                <textarea rows="12"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="education">
 
-        Education score: 3.2
-        English, Honors Program graduate <br />
-        Boston College <br />
-        2001 - 2002 <br />
-        Shakespeare, Theism, Nietzsche <br />
-        University of Oxford <br />
+    </div>
+    <div id="contract">
 
-
+      <div class="u-light u-content">
+        <div class="u-container">
+          <div class="Grid Grid--alignLeft Grid--withSpace">
+            <div class="Grid-cell u-size1of3">
+              <h2>Coming Soon…</h2>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="hillgate">
+    </div>
+    
+    <div id="timeline">
 
-        Hillgate score: 2.3 <br />
-        Hillgate Verified <br />
-        Languages [ARRAY] <br />
-        Available to work IMMEDIATELY <br />
-        Hours per week 40+ HOURS PER WEEK <br />
-        Skills [ARRAY] <br />
-        Member since Jan 2013 <br />
-        Profile views: 1,300 <br />
-        Projects completed: 12 <br />
-        Application count: 134 <br />
-        Fees received: $10,239 <br />
+      <div class="u-light u-content">
+        <div class="u-container">
+          <div class="Grid Grid--alignLeft Grid--withSpace">
+            <div class="Grid-cell u-size1of3">
+              <h2>Coming Soon…</h2>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      </div>
-      <div id="cases">
-
-        Projects Score: 9.2
-
-      </div>
-      <div id="authorship">
-        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-      </div>
-      <div id="social">
-        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-      </div>
     </div>
 
   </div> <!-- js-tabs -->
@@ -424,20 +440,22 @@
 </main>
 
 <footer class="Footer">
-  <ul>
-    <li><a href="javascript:;">hillgateconnect.com<span>/home</span></a>
-    </li>
-    <li><a href="javascript:;">Blog</a>
-    </li>
-    <li><a href="javascript:;">Press</a>
-    </li>
-    <li><a href="javascript:;">Terms of Use</a>
-    </li>
-    <li><a href="javascript:;">Privacy</a>
-    </li>
-    <li><a href="javascript:;">Careers</a>
-    </li>
-  </ul>
+  <div class="u-container">
+    <ul>
+      <li><a href="javascript:;">hillgateconnect.com<span>/home</span></a>
+      </li>
+      <li><a href="javascript:;">Blog</a>
+      </li>
+      <li><a href="javascript:;">Press</a>
+      </li>
+      <li><a href="javascript:;">Terms of Use</a>
+      </li>
+      <li><a href="javascript:;">Privacy</a>
+      </li>
+      <li><a href="javascript:;">Careers</a>
+      </li>
+    </ul>
+  </div>
 </footer>
 
 
@@ -445,180 +463,65 @@
     <script src='js/app.js'></script>
 
 
-<<!--  D3 Meter for OverallScore -->>
+<<!-- COLUMN CHART FOR TIMEFRAME-->>
 <script>
 
-var twoPi = 2 * Math.PI,
-    progress = 0,
-    total = 100,
-    formatPercent = d3.format("0.0");
+var margin = {top: 10, right: 10, bottom: 55, left: 20},
+    width = $('#ContractTimeframe').width() - margin.left - margin.right,
+    height = $('#ContractTimeframe').height() - margin.top - margin.bottom;
 
-var width = $("#OverallScore").width();
-var height = $("#OverallScore").height()-30;
-
-var arc = d3.svg.arc()
-    .startAngle(0)
-    .innerRadius(70)
-    .outerRadius(72)
-;
-
-var svg = d3.select("#OverallScore").append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .attr('fill', '#fff')
-    .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
-
-var meter = svg.append("g")
-    .attr("class", "progress-meter");
-
-meter.append("path")
-    .attr("class", "background")
-    .attr("d", arc.endAngle(twoPi));
-
-var foreground = meter.append("path")
-    .attr("class", "foreground");
-
-var text = meter.append("text")
-    .attr("y","16")
-    .attr("text-anchor", "middle");
-
-
-text.text(8.7);
-
-var animate = function(percentage){
-    var i = d3.interpolate(progress, percentage);
-
-    d3.transition().duration(500).tween("progress", function () {
-        return function (t) {
-            progress = i(t);
-            foreground.attr("d", arc.endAngle(twoPi * progress));
-        };
-    });
-};
-
-setTimeout(function () {
-  animate(0.87);
-}, 500);
-
-</script>
-
-<<!--  Normal Curve for Ratings for OverallScore -->>
-
-<script type="text/javascript">
-//setting up empty data array
-var backgroundData = [];
-var foregroundData = [];
-
-getData(); // populate data
-
-// line chart based on http://bl.ocks.org/mbostock/3883245
-var margin = {
-        top: 20,
-        right: 30,
-        bottom: 90,
-        left: 30
-    },
-    width = $('#Ratings').width() - margin.left - margin.right,
-    height = $('#Ratings').height() - margin.top - margin.bottom;
-
-var x = d3.scale.linear()
-    .range([0, width]);
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
 
 var y = d3.scale.linear()
     .range([height, 0]);
 
-var line = d3.svg.line()
-    .x(function(d) {
-        return x(d.q);
-    })
-    .y(function(d) {
-        return y(d.p);
-    });
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
 
-var area = d3.svg.area()
-  .x(function(d) {
-      return x(d.q);
-  })
-  .y0(height)
-  .y1(function(d) {
-      return y(d.p);
-  });
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .ticks(5, "0.1");
 
-var svg = d3.select("#Ratings").append("svg")
+var svg = d3.select("#ContractTimeframe").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-    .append("g")
+  .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-x.domain(d3.extent(backgroundData, function(d) {
-    return d.q;
-}));
-y.domain(d3.extent(backgroundData, function(d) {
-    return d.p;
-}));
+var data = [
+  {y: 5.4, x: 'Days so far'},
+  {y: 3.2, x: 'Days remaining'}
+]
 
-svg.append("path")
-    .datum(foregroundData)
-    .attr("class", "NormalCurve--Foreground")
-    .attr("d", area);
+x.domain(data.map(function(d) { return d.x; }));
+y.domain([0, d3.max(data, function(d) { return d.y; })]);
 
-svg.append("path")
-    .datum(backgroundData)
-    .attr("class", "NormalCurve--Background")
-    .attr("d", line);
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
 
+svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis)
 
+svg.selectAll(".bar")
+    .data(data)
+  .enter().append("rect")
+    .attr("class", "bar")
+    .attr("x", function(d) { return x(d.x); })
+    .attr("width", x.rangeBand())
+    .attr("y", function(d) { return y(d.y); })
+    .attr("height", function(d) { return height - y(d.y); });
 
-
-
-function getData() {
-
-// loop to populate data array with
-// probabily - quantile pairs
-for (var i = 0; i < 10000; i++) {
-    q = normal() // calc random draw from normal dist
-    p = gaussian(q) // calc prob of rand draw
-    el = {
-        "q": q,
-        "p": p
-    }
-    backgroundData.push(el)
-};
-
-// need to sort for plotting
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-backgroundData.sort(function(x, y) {
-    return x.q - y.q;
-});
-foregroundData = backgroundData.slice(0,9000);
+function type(d) {
+  d.frequency = +d.frequency;
+  return d;
 }
 
-// from http://bl.ocks.org/mbostock/4349187
-// Sample from a normal distribution with mean 0, stddev 1.
-function normal() {
-    var x = 0,
-        y = 0,
-        rds, c;
-    do {
-        x = Math.random() * 2 - 1;
-        y = Math.random() * 2 - 1;
-        rds = x * x + y * y;
-    } while (rds == 0 || rds > 1);
-    c = Math.sqrt(-2 * Math.log(rds) / rds); // Box-Muller transform
-    return x * c; // throw away extra sample y * c
-}
-
-//taken from Jason Davies science library
-// https://github.com/jasondavies/science.js/
-function gaussian(x) {
-	var gaussianConstant = 1 / Math.sqrt(2 * Math.PI),
-		mean = 0,
-    	sigma = 1;
-
-    x = (x - mean) / sigma;
-    return gaussianConstant * Math.exp(-.5 * x * x) / sigma;
-};
 </script>
 
 

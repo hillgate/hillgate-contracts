@@ -22,8 +22,8 @@
   --u-color-blue-light: #4a6985;
   --u-color-blue-lighter: #ACB4DC;
 
-  --u-color-success: #C69FAE;
-  --u-color-success-dark: #C69FAE;
+  --u-color-success: #e0f1e9;
+  --u-color-success-dark: #1d9d74;
   --u-color-warning: #C69FAE;
   --u-color-warning-dark: #C69FAE;
   --u-color-danger: #C69FAE;
@@ -70,10 +70,15 @@ h1 {
 }
 .u-dark {
   background-color: var(--u-color-metric);
+}
+.u-content {
   border-top: 1px solid var(--u-color-brand);
-  height: 600px;
+  min-height: 600px;
 }
 
+.Grid--withSpace .Grid-cell {
+  margin-top: 60px;
+}
 
 .Sidebar {
   color: var(--u-color-white);
@@ -158,6 +163,12 @@ h1 {
   font-weight: 600;
   font-size: 0.8rem;
   background-color: var(--u-color-white);
+}
+.Button--Sexy {
+  padding: 1em;
+  margin-top: 25px;
+  border-radius: 100px;
+  border: 2px solid #2D4051;
 }
 
 
@@ -257,6 +268,12 @@ h1 {
   display: inline-block;
   font-family: var(--u-font-serif);
 }
+.Matric--value--lower {
+  margin: 10px auto;
+  width: 100%;
+  text-align: center;
+  font-size: 6rem;
+}
 .Metric--units {
   display: inline-block;
   font-weight: 100;
@@ -349,6 +366,63 @@ h1 {
   font-weight: bold;
 }
 
+.SignatureAuthority {
+  position: relative;
+  margin: 0 0 1em 0.75em;
+  background-color: var(--u-color-gray-lighter);
+  padding: 8px;
+  border: 2px solid var(--u-color-metric-dark);
+}
+
+/* Required for Down Triangle */
+.SignatureAuthority:before, .SignatureAuthority:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-left: 0;
+}
+
+/* Stroke */
+.SignatureAuthority:before {
+  left: -11px;
+  top: 5px;
+
+  /* If 1px darken stroke slightly */
+  border-right-color: var(--u-color-metric-dark);
+  border-width: 10px;
+}
+
+/* Fill */
+.SignatureAuthority:after {
+  left: -8px;
+  top: 5px;
+  border-right-color: var(--u-color-gray-lighter);
+  border-width: 10px;
+}
+
+.SignatureAuthority--Email {
+  color: var(--u-color-base-text);
+  font-size: 0.9rem;
+}
+.SignatureAuthority--Name {
+  font-weight: 600;
+  color: var(--u-color-metric-dark);
+}
+.SignatureAuthority--Status {
+  float: right;
+  color: var(--u-color-success-dark);
+  background-color: white;
+  border-radius: 52px;
+  border: 2px solid var(--u-color-metric-dark);
+  font-size: 0.8rem;
+  padding: 8px;
+  font-weight: bold;
+}
+
+
 .Curve--title {
   color: white;
   margin-bottom: 11px;
@@ -379,7 +453,7 @@ h1 {
 
 .Footer {
   background-color: var(--u-color-gray-lighter);
-  padding: 1.5em;
+  padding: 1.5em 0;
 }
 .Footer li {
   display: inline-block;
@@ -470,4 +544,36 @@ text.ChartTitle {
   fill: var(--u-color-white);
   stroke: var(--u-color-metric);
   stroke-width: 2px;
+}
+
+.Icon--Nope {
+  color: var(--u-color-white);
+}
+
+dl.dl-horizontal dt {
+  text-align: left;
+}
+.dl-horizontal dt {
+  float: left;
+  width: 140px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+dl dt {
+  font-size: 0.9rem;
+  /*text-transform: uppercase;*/
+  font-weight: 300;
+  /*color: #7D7D8E;*/
+}
+.dl-horizontal dd {
+  margin-left: 160px;
+}
+
+textarea {
+  font-family: var(--u-font-serif);
+  font-size: 1.1rem;
+  width: 100%;
 }
